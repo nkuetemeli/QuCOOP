@@ -6,6 +6,8 @@ This code can be used to reproduce the experiments and results of the paper <br/
     A Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers. 
     Publication Venur. URL
 
+![QuCOOP](images/qucoop.png)
+
 QuCOOP is a general framework for solving, on quantum annealers, problems of the form
 
 $$min_{x\in \{0, 1\}^n} \quad f(g(x)),$$
@@ -33,7 +35,7 @@ Move to the `src` folder to run the subsequent commands.
 
 # Example
 
-    # Run tiny random porblems br running `psr.py` and `qap.py` directly
+    # Solve random problems instances by running `psr.py` and `qap.py` directly
     # Close the Plots as they pop-up to continue the execution of the script
     python psr.py
     python qap.py
@@ -41,7 +43,7 @@ Move to the `src` folder to run the subsequent commands.
 # Run demos
 
     # Demos are pre-fixed by the word 'demo_' 
-    # Try some demos, specify while calling the solver wheter to use simulated or quantum annealing
+    # Try some demos! Specify, while calling the solver, whether to use simulated or quantum annealing
     python demo_point_set_registration.py
     python demo_quadratic_assignment.py
     python demo_shape_matching.py
