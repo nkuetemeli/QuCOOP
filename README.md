@@ -6,7 +6,7 @@ This code can be used to reproduce the experiments and results of the paper <br/
     A Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers. 
     Publication Venur. URL
 
-![QuCOOP](images/qucoop.png)
+<img src="images/qucoop.png" alt="QuCOOP" width="400"/>
 
 QuCOOP is a general framework for solving, on quantum annealers, problems of the form
 
