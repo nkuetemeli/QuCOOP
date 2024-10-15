@@ -1,0 +1,9 @@
+setup.py
+QuCOOP.egg-info/PKG-INFO
+QuCOOP.egg-info/SOURCES.txt
+QuCOOP.egg-info/dependency_links.txt
+QuCOOP.egg-info/top_level.txt
+src/__init__.py
+src/psr.py
+src/qap.py
+src/utils.py

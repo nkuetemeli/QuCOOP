@@ -1,0 +1,9 @@
+dimod
+dwave-ocean-sdk
+matplotlib
+numpy
+Pillow
+pycpd
+scipy
+sympy
+trimesh
