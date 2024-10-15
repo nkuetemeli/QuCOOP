@@ -8,7 +8,7 @@ This code can be used to reproduce the experiments and results of the paper <br/
 
 QuCOOP is a general framework for solving, on quantum annealers, problems of the form
 
-$$min_{x\in \{0, 1\}^n} \quad f(g(x)),$$
+$$min_{x\in \left\{0, 1\right\}^n} \quad f(g(x)),$$
 
 where $f$ is quadratic in $g(x)$.
 
