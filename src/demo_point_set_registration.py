@@ -55,7 +55,7 @@ if __name__ == "__main__":
     reg = RigidRegistration(X=ref_points[:, :a].T, Y=tmp_points[:, :b].T)
     TY, (s_reg, R_reg, t_reg) = reg.register()
     R_rec_cpd = R_reg.T
-    P_rec_cpd = utils.permutation_idx2mat(np.argmin(np.array([[np.linalg.norm(x - y) for x in TY] for y in ref_points.T]), 1))
+    P_rec_cpd = reg.P.T
 
     # Result
 
