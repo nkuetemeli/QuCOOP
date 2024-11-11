@@ -57,7 +57,9 @@ def mesh_to_image(vertices, faces, data, cmap='GnBu_r'):
 def render(Xfaces, Yfaces, Xvertices, Yvertices, P_list):
     n = Xvertices.shape[0]
 
-    data = np.eye(n) @ np.sum(Xvertices, axis=1)
+    data_base = np.sum(Xvertices, axis=1)
+
+    data = np.eye(n) @ data_base
     ref = mesh_to_image(Xvertices, Xfaces, data, cmap='GnBu' + '_r')
 
     data = P_list[0] @ Xvertices[:, -1]
@@ -91,15 +93,23 @@ if __name__ == '__main__':
     Yfaces, Yvertices, Ygeodesics, Ydescriptors = load_shape(Ypb_instance)
 
     n = 502
-    P_init = np.eye(n)
-    np.random.shuffle(P_init)
+    Permutation1 = np.eye(n)
+    Permutation2 = np.eye(n)
+    np.random.shuffle(Permutation2)
 
-    Yvertices = P_init @ Yvertices
-    Ygeodesics = P_init @ Ygeodesics @ P_init.T
-    Ydescriptors = P_init @ Ydescriptors
-    Yfaces = np.dstack([((P_init.T @ np.arange(n))[i]).astype(np.int32) *
-                        (Yfaces==i).astype(np.int32) for i in np.arange(n)]).sum(axis=2)
-    P_star = P_init.copy()
+    Xvertices = Permutation1 @ Xvertices
+    Xgeodesics[:, :] = Permutation1 @ Xgeodesics @ Permutation1.T
+    Xdescriptors[:, :] = Permutation1 @ Xdescriptors
+    Xfaces = np.dstack([((Permutation1.T @ np.arange(n))[i]).astype(np.int32) *
+                        (Xfaces == i).astype(np.int32) for i in np.arange(n)]).sum(axis=2)
+
+    Yvertices = Permutation2 @ Yvertices
+    Ygeodesics[:, :] = Permutation2 @ Ygeodesics @ Permutation2.T
+    Ydescriptors[:, :] = Permutation2 @ Ydescriptors
+    Yfaces = np.dstack([((Permutation2.T @ np.arange(n))[i]).astype(np.int32) *
+                        (Yfaces == i).astype(np.int32) for i in np.arange(n)]).sum(axis=2)
+
+    P_star = Permutation2 @ Permutation1.T
 
     # initial matching by descriptor comparison
     softC = Xdescriptors.dot(Ydescriptors.transpose())
