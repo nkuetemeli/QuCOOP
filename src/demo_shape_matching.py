@@ -86,8 +86,8 @@ def render(Xfaces, Yfaces, Xvertices, Yvertices, P_list):
 
 
 if __name__ == '__main__':
-    Xpb_instance, Ypb_instance = ('../data/FaustDS/tr_reg_000.mat',
-                                  '../data/FaustDS/tr_reg_001.mat')
+    Xpb_instance, Ypb_instance = ('../data/FaustDS/tr_reg_030.mat',
+                                  '../data/FaustDS/tr_reg_032.mat')
 
     Xfaces, Xvertices, Xgeodesics, Xdescriptors = load_shape(Xpb_instance)
     Yfaces, Yvertices, Ygeodesics, Ydescriptors = load_shape(Ypb_instance)
