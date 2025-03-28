@@ -103,7 +103,7 @@ if __name__ == '__main__':
     qap = QAP(Q, P_star)
     history = qap.solve()
 
-    # Results
+    # ResultsFLFalse
     print(f'\nResults:            {(qap.P_sol @ np.arange(n)).astype(int)}, objective: {qap.objective(qap.P_sol)}'
           f'\nGround through:     {(P_star @ np.arange(n)).astype(int)}, objective: {qap.objective(P_star)}.')
     plt.plot(history, label='Objective')

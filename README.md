@@ -2,9 +2,12 @@
 This code can be used to reproduce the experiments and results of the paper <br/>
 **A Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers**.
 
-    Authors 
-    A Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers. 
-    Publication Venur. URL
+    @article{meli2025qucoop,
+      title={QuCOOP: A Versatile Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers},
+      author={Meli, Natacha Kuete and Golyanik, Vladislav and Benkner, Marcel Seelbach and Moeller, Michael},
+      journal={arXiv preprint arXiv:2503.19718},
+      year={2025}
+    }
 
 <div align="center">
 	<img src="images/qucoop.png" alt="QuCOOP" width="400" class="center"/>

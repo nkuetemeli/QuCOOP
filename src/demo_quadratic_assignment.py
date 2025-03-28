@@ -60,7 +60,7 @@ if __name__ == '__main__':
     P_qmatch = utils.permutation_idx2mat(np.array(Permutations[-1]))
     sol_qmatch = (P_qmatch @ np.arange(n)).astype(int)
 
-    # Results
+    # ResultsFLFalse
     plt.plot(history, label='Objective')
     plt.hlines(qap.objective(P_star), 0, len(history) - 1, linestyles='--', color='r', label='Objective target')
     plt.legend()
