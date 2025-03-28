@@ -1,6 +1,6 @@
 # QuCOOP: Composite Optimization on Quantum Annealers
-This code can be used to reproduce the experiments and results of the paper <br/>
-**A Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers**.
+This code can be used to reproduce the experiments and results of our paper <br/>
+**QuCOOP: A Versatile Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers**.
 
     @article{meli2025qucoop,
       title={QuCOOP: A Versatile Framework for Solving Composite and Binary-Parametrised Problems on Quantum Annealers},
